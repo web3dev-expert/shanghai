@@ -1,0 +1,305 @@
+
+.educationPage {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 2rem;
+  background: white;
+  color: black;
+  overflow-y: auto;
+}
+
+.leftColumn {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.rightColumn {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+.titleSection {
+  margin-bottom: 2rem;
+}
+
+.mainTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+  color: black;
+}
+
+.titleUnderline {
+  width: 100%;
+  height: 3px;
+  background: black;
+  margin-top: 0.5rem;
+}
+
+.textContent {
+  line-height: 1.6;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+.textContent p {
+  margin-bottom: 1.2rem;
+}
+
+.dropCap {
+  position: relative;
+}
+
+.firstLetter {
+  float: left;
+  font-size: 4rem;
+  line-height: 3.2rem;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.sectionHeader {
+  margin: 1.5rem 0 1rem 0;
+}
+
+.sectionHeader h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  color: black;
+}
+
+.wellQuoteSection {
+  /* background: #f8f9fa; */
+  /* border: 1px solid #ddd; */
+  padding: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.quotePart {
+  flex: 1;
+  /* background: #f8f9fa; */
+  border: 2px solid #333;
+  border-left: 0px;
+  border-right: 0px;
+  margin-right: 1rem;
+  width: 50vw;
+  background-size: fill;
+}
+
+.quoteStyle {
+  color: transparent;
+  font-weight: normal;
+  font-style: normal;
+  font-family: f35generic;
+  font-size: 2000px;
+  border: 0;
+  margin: 0;
+  white-space: pre;
+  position: absolute;
+  display: block;
+  line-height: 1.00;
+}
+
+.wellEducatedPart {
+  flex: 1;
+  padding: 1.5rem;
+  margin-right: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  color: black;
+}
+
+.sectionText {
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: black;
+  padding: 10%;
+}
+
+.additionalText {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: justify;
+  color: #333;
+}
+
+.videoSection {
+  background: white;
+  width: 75%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.videoContainer {
+  background: white;
+}
+
+.videoPlayer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: black;
+}
+
+.videoFrame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.videoInfo {
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #eee;
+}
+
+.videoTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a73e8;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.videoTitle:hover {
+  text-decoration: underline;
+}
+
+.videoMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.videoTime {
+  font-family: monospace;
+}
+
+.videoControls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.videoControls svg {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.videoControls svg:hover {
+  opacity: 1;
+}
+
+.youtubeText {
+  font-weight: 600;
+  color: #ff0000;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+.sectionContinuation,
+.rightBottomSection {
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.sectionContinuation h3,
+.rightBottomSection h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .educationPage {
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    gap: 1rem;
+    overflow-y: auto;
+  }
+  
+  .leftColumn,
+  .rightColumn {
+    padding: 0;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .firstLetter {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+  
+  .textContent {
+    font-size: 0.85rem;
+  }
+  
+  .bottomSection {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .wellQuoteSection {
+    /* background: #f8f9fa; */
+    /* border: 1px solid #ddd; */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .quotePart {
+    margin: auto;
+    width: 80vw;
+    left: -5%;
+  }
+
+  .wellEducatedPart {
+    margin: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}

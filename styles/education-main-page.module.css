@@ -1,0 +1,69 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9ff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cardLeft {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.cardLeft h3 {
+  margin: 0 0 0.5rem;
+}
+
+.cardLeft p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.icon {
+  color: #e23;
+  margin-left: 6px;
+}
+
+.cardRight {
+  flex: 1;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #444;
+  border-top: 1px dashed #ddd;
+}
+
+.cardRight p {
+  margin: 0.3rem 0;
+}
+
+.age {
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.calculate {
+  color: #0077dd;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}

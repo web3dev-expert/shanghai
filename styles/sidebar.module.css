@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .sidebarForMob {
+        top: 60px;
+        z-index: 100;
+        left: -8px;
+    }
+}
+
+.my-element {
+    all: unset;
+  }

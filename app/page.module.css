@@ -1,0 +1,51 @@
+.bookForLap {
+    /* height: 100vh; */
+}
+
+
+.bookForMob {
+    display: none;
+}
+
+.btnSize {
+    size: 50px;
+}
+
+@media (max-width: 640px) {
+    .bookForLap {
+        display: none;
+    }
+    .bookForMob {
+        display: contents;
+    }
+    .Laptop {
+        display: none;   
+    }
+}
+
+@media (max-width: 768px) {
+    .bookForLap {
+        display: none;
+    }
+    .bookForMob {
+        display: contents;
+    }
+    .Laptop {
+        display: none;   
+    }
+    .btnSize {
+        size: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bookForLap {
+        display: none;
+    }
+    .bookForMob {
+        display: contents;
+    }
+    .Laptop {
+        display: none;   
+    }
+}

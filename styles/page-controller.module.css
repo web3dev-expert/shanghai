@@ -1,0 +1,40 @@
+.btnSize {
+    height: 35px;
+    width: 35px;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.leftbarPos {
+    translate: 50%;
+}
+
+.rightbarPos {
+    translate: -50%;
+}
+
+.leftHidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .btnSize {
+        height: fit-content;
+    }
+
+    .barPos {
+        translate: 0;
+    }
+
+    .leftbarPos {
+        width: 80dvw;
+        translate: 0dvw;
+        height: 60%;
+    }
+
+    .rightbarPos {
+        width: 80dvw;
+        height: 60%;
+        translate: 0dvw;
+    }
+}

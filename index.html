@@ -1,0 +1,236 @@
+> Doug:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaSName - InDesign Inspired Layout</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the "master page" grid lines for visualization */
+        .grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(to right, rgba(230, 230, 250, 0.5) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(230, 230, 250, 0.5) 1px, transparent 1px);
+            background-size: 4rem 4rem;
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- This container acts as the overall "document" or artboard -->
+    <div class="relative min-h-screen">
+        
+        <!-- Optional: Grid overlay to visualize the layout structure like InDesign guides -->
+        <!-- <div class="grid-overlay"></div> -->
+
+        <!-- =================================================================== -->
+        <!-- MASTER PAGE HEADER: This section is like a master page header.    -->
+        <!-- It remains consistent across all pages.                           -->
+        <!-- =================================================================== -->
+        <header class="sticky top-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-2">
+                         <svg class="h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h9.75a2.25 2.25 0 012.25 2.25z" />
+                        </svg>
+                        <span class="text-2xl font-bold text-gray-900">SaaSName</span>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Features</a>
+                        <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Pricing</a>
+                        <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Templates</a>
+                        <a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Resources</a>
+                    </nav>
+                    
+                    <!-- Call to Action Buttons -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-indigo-600">Log In</a>
+                        <a href="#" class="bg-indigo-600 text-white px-5 py-2 rounded-lg shadow hover:bg-indigo-700 transition-colors">Start Free Trial</a>
+                    </div>
+
+> Doug:
+<!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#" class="text-gray-600 hover:text-indigo-600">Features</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600">Pricing</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600">Templates</a>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600">Resources</a>
+                    <hr/>
+                    <a href="#" class="text-gray-600 hover:text-indigo-600">Log In</a>
+                    <a href="#" class="w-full text-center bg-indigo-600 text-white px-5 py-2 rounded-lg shadow hover:bg-indigo-700">Start Free Trial</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- =================================================================== -->
+        <!-- PAGE CONTENT AREA: This is where the unique content for each      -->
+        <!-- "page" would go. It's the editable region within the master frame.  -->
+        <!-- =================================================================== -->
+        <main class="container mx-auto px-6 py-16 md:py-24">
+            
+            <!-- This is an example of a page's content -->
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="text-indigo-500 font-semibold">DESIGN-DRIVEN WORKFLOWS</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mt-2">Craft Your Vision with Precision</h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600">Our platform provides the structure of a design tool with the power of a modern SaaS application. Build, collaborate, and launch faster than ever before.</p>
+                <div class="mt-8 flex justify-center gap-4">
+                     <a href="#" class="bg-indigo-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-indigo-700 transition-transform transform hover:scale-105">Get Started Now</a>
+                     <a href="#" class="bg-white text-gray-700 px-8 py-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors">See a Demo</a>
+                </div>
+            </div>
+
+            <!-- Example of a layout grid, similar to placing frames in InDesign -->
+            <div class="mt-24 md:mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="bg-indigo-100 text-indigo-600 rounded-lg w-12 h-12 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.5L15.232 5.232z"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">Master Templates</h3>
+                    <p class="mt-2 text-gray-600">Define reusable layouts and components that ensure brand consistency across your entire project.</p>
+                </div>
+
+> Doug:
+<!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+                    <div class="bg-indigo-100 text-indigo-600 rounded-lg w-12 h-12 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">Collaborative Canvas</h3>
+                    <p class="mt-2 text-gray-600">Work with your team in real-time on a shared canvas, just like a collaborative design file.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-2xl transition-shadow duration-300">
+                     <div class="bg-indigo-100 text-indigo-600 rounded-lg w-12 h-12 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-900">Pixel-Perfect Export</h3>
+                    <p class="mt-2 text-gray-600">Generate clean, responsive code or export assets with precision, ensuring your design translates perfectly.</p>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- =================================================================== -->
+        <!-- MASTER PAGE FOOTER: This section is like a master page footer.    -->
+        <!-- It also remains consistent across all pages.                      -->
+        <!-- =================================================================== -->
+        <footer class="bg-white border-t border-gray-200 mt-auto">
+            <div class="container mx-auto px-6 py-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                    <!-- Column 1: Logo and Info -->
+                    <div class="col-span-2 lg:col-span-1">
+                        <div class="flex items-center space-x-2">
+                             <svg class="h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h9.75a2.25 2.25 0 012.25 2.25z" />
+                            </svg>
+                            <span class="text-xl font-bold">SaaSName</span>
+                        </div>
+                        <p class="mt-4 text-gray-500">The modern way to design and build.</p>
+                    </div>
+                    
+                    <!-- Column 2: Product Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Product</h4>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Features</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Integrations</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Pricing</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Changelog</a></li>
+                        </ul>
+                    </div>
+
+> Doug:
+<!-- Column 3: Company Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Company</h4>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">About Us</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Careers</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Blog</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 4: Resources Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Resources</h4>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Help Center</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">API Docs</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">System Status</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 5: Legal Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Legal</h4>
+                        <ul class="mt-4 space-y-3">
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-500 hover:text-indigo-600">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Footer -->
+                <div class="mt-12 pt-8 border-t border-gray-200 flex flex-col md:flex-row items-center justify-between">
+                    <p class="text-gray-500 text-sm">&copy; 2024 SaaSName, Inc. All rights reserved.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <!-- Social Icons -->
+                        <a href="#" class="text-gray-400 hover:text-gray-500"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-gray-500"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
